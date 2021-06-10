@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="terheles.css">
+    <link rel="icon" href="kepek/mavenfavicon.png">
+    <title>Összefoglalás</title>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <a href="fomenu.html"><img src="kepek/logo.png" class="logo"></a>
+            <ul>
+                <li><a href="javaossze.html">Összefoglalás</a></li>
+                <li><a href="terheles.html">Terheléses tesztek</a></li>
+                <li><a href="egysegteszteles.html">Egységtesztelés</a></li>
+                <li><a href="javadoc.html">JavaDoc</a></li>
+                <li><a href="teszt.html">Teszt Intellij IDEA alatt</a></li>
+                <li><a href="tesztpelda.html">Teszt példák</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="row">
+                <div class="oszlop">
+                    <p class="teszteles">
+                    <ul class="teszteles_csoport">
+                        Amikor az elkészült alkalmazások funkcionálisan már működőképesek,
+                        végső
+                        működési környezetükbe kerülés
+                        előtt fontos ellenőrizni a rendszer teljesítőképességét.
+                        Ezt általában már a tesztelési folyamatot lezáró végső felhasználói teszt keretében végzik el.
+                        A tervezés során specifikált hardverigény, a
+                        tervezett párhuzamos felhasználók száma, a rendszer adott időszakban történő elérhetősége és
+                        válaszideje
+                        mind olyan követelmények, amelyeket az elkészült alkalmazásnak teljesítenie kell.
+                        Ezeknek a feltételeknek a vizsgálatára szolgálnak a terheléses tesztek.
+                        A terheléses tesztekben többféle módszerrel vizsgálhatjuk az elkészült rendszert. Vizsgálhatjuk
+                        a kívánt
+                        paraméterek szerinti teljesítményt, vagy akár a rendszer túlterheltségének hatását, a huzamosabb
+                        ideig
+                        tartó csúcsterhelés hatását, alkalmazhatjuk a fokozatos terhelés módszerét stb.
+                        A terheléses teszteknél különösen célszerű ügyelni arra, hogy a tesztrendszer paraméterei
+                        összemérhetők
+                        legyenek az éles rendszer paramétereivel. Ezzel biztosíthatjuk, hogy a tesztrendszerben mért
+                        teljesítmény-értékek az éles rendszerben is mérvadóak legyenek.
+                        A webes alkalmazások (de akár fájlszerver kapcsolatok, adatbázis kapcsolatok, Java objektumok,
+                        web szolgáltatások stb.) teljesítménytesztelésére használható egyik eszköz a több
+                        operációs rendszeren is
+                        működő JMeter.</p>
+                </div>
+                <div class="oszlop">
+                    <p class="teszteles">
+                    <ul class="teszteles_csoport">
+                        A JMeter-ben egy grafikus felület segítségével lehet a teszteseteket
+                        összeállítani, a
+                        tesztek eredményeit táblázatokban, grafikonokon tudjuk megtekinteni. Egy beépített proxy-szerver
+                        segítségével a küldött üzenetek rögzíthetők és újra lejátszhatók.
+                        A JMeter több szálon futó tesztelést is képes végrehajtani az ún. Thread Group-ok segítségével,
+                        így
+                        szimulálva az egyes felhasználókat, akik különböző oldalakat próbálnak elérni. Az időzítők
+                        segítségével
+                        pedig a terhelés elosztását is szabályozni lehet.
+                        A JMeter-rel elvégzendő tesztek tervezésekor használatos elemek a tesztet vezérlő elemek: az ún.
+                        Sampler
+                        (ami a szerver felé történő kommunikációt indítja és a választ várja) és a logikai vezérlő
+                        (logika annak
+                        eldöntésére, hogy a kérés milyen feltétellel, mikor induljon).
+                        A szervertől visszaérkező válaszok elvárt eredménnyel való összehasonlítására használt elem az
+                        ún.
+                        Assertion elem. A Listener-ek feladata pedig az adatok összegyűjtése és az igények szerinti
+                        riportokhoz
+                        szükséges adatok előállítása.
+                        Ezekből a JMeter-ben használatos alapelemekből építhető fel a különféle szerverek
+                        teljesítménytesztjéhez
+                        szükséges tesztterv. A részletesebb beállítások természetesen már a teszt céljától és tárgyától
+                        függően
+                        mások lesznek, ám a JMeter működésének megértéséhez ezek az elemek nélkülözhetetlenek.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

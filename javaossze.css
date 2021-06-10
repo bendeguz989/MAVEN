@@ -1,0 +1,92 @@
+body{
+        width: 100%;
+        background-image: linear-gradient(rgb(0,0,0,0.75), rgb(0,0,0,0.75)),url(kepek/osszefoglalas.jpg);;
+        background-size: cover;
+        background-position: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #fff;
+}
+ol{
+ color: #97ad9b; font-family: 'Rouge Script', cursive; font-size: 25px; font-weight: normal; line-height: 48px; margin: 0 0 0px; text-align: left; text-shadow: 1px 1px 2px #7907fc
+}
+h3 { 
+    color: #009688; 
+    font-family: 'Droid serif', serif; 
+    font-size: 36px; 
+    font-weight: 400; 
+    font-style: italic; 
+    line-height: 44px; 
+    margin: 0 0 12px; 
+    text-align: center; }
+.banner{
+    width: 100%;
+    background-image: linear-gradient(rgb(0,0,0,0.75), rgb(0,0,0,0.75)),url(kepek/osszefoglalas.jpg);;
+    background-size: cover;
+    background-position: center;
+}
+.pattern-container .pattern {
+    background-size: cover;
+    background-position: 50% 50%;
+
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom:-10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.teszteles{
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 3px;
+    display: block;
+    overflow: auto;
+}
+.lista {
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 16px;
+    background-color: #5841414d;
+    border: 2px solid #009688; 
+  }
+.teszteles_csoport {
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 17px;
+    background-color: #5841414d;
+    border: 2px solid #009688; 
+  }
