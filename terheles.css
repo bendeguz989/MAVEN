@@ -21,7 +21,6 @@ h3 {
 }
 .banner{
     width: 100%;
-
 }
 .navbar{
     width: 85%;
@@ -87,7 +86,6 @@ body {
     cursor: pointer;
   }
   
-  
   input[type=radio]:nth-child(5) {
     margin-right: 0px;
   }
@@ -95,7 +93,7 @@ body {
   input[type=radio]:checked {
     opacity: 1;
   }
-  
+
   
   #slider label {
     position: absolute;
@@ -131,10 +129,6 @@ body {
     padding: 15px;
   }
   
-  #slide5 {
-    background:white;
-    padding: 15px;
-  }
   
   #s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3, #s4:checked ~ #slide4, #s5:checked ~ #slide5 {
     box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
