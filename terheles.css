@@ -23,7 +23,7 @@ h3 {
     width: 100%;
 }
 .navbar{
-    width: 85%;
+    width: 95%;
     margin: auto;
     padding: 35px 0;
     display: flex;
@@ -89,16 +89,15 @@ body {
   input[type=radio]:nth-child(5) {
     margin-right: 0px;
   }
-  
+
   input[type=radio]:checked {
     opacity: 1;
   }
 
-  
   #slider label {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: auto;
     left: 0;
     top: 0;
     color: white;
@@ -114,19 +113,18 @@ body {
 
   #slide1 {
     background: black;
+    
   }
   #slide2 {
     background: black;
   }
   
   #slide3 {
-    background: white;
-    padding: 15px;
+    background: black;
   }
   
   #slide4 {
-    background: white;
-    padding: 15px;
+    background: black;
   }
   
   
@@ -160,4 +158,5 @@ body {
     font-size: 24px;
     background-color: #5841414d;
     border: 2px solid #009688; 
+   
   }

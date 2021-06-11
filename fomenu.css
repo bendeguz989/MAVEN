@@ -31,7 +31,6 @@ a, button {
 footer {
     text-align: center;
     overflow: auto;
-    position: relative;
     top: 97.5%;
     position: fixed;
 	bottom: 0;
@@ -42,7 +41,7 @@ footer a:hover {
     color: #009688;
 }
 .navbar{
-    width: 85%;
+    width: 95%;
     margin: auto;
     padding: 35px 0;
     display: flex;
