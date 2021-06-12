@@ -1,7 +1,7 @@
 body{
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgb(0,0,0,0.75), rgb(0,0,0,0.75)),url(kepek/tesztkep.jpg);
+    background-image: linear-gradient(rgb(0,0,0,0.75), rgb(0,0,0,0.75)),url(kepek/fal.jpg);
     background-size: cover; 
     background-position: center;
 }
@@ -13,7 +13,7 @@ body{
 .banner{
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgb(0,0,0,0.75), rgb(0,0,0,0.75)),url(kepek/tesztkep.jpg);
+    background-image: linear-gradient(rgb(0,0,0,0.75), rgb(0,0,0,0.75)),url(kepek/fal.jpg);
     background-size: cover; 
     background-position: center;
 }

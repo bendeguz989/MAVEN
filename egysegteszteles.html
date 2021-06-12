@@ -6,195 +6,216 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="egysegteszteles.css">
     <link rel="icon" href="kepek/mavenfavicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
     <title>Egységtesztelés</title>
 </head>
 <body>
     <div class="banner">
-        <div class="navbar">
-            <a href="index.html"><img src="kepek/logo.png" class="logo"></a>
+            <div class="navbar">
+                <a href="index.html"><img src="kepek/logo.png" class="logo"></a>
+                <ul>
+                    <li><a href="javaossze.html">Összefoglalás</a></li>
+                    <li><a href="egysegteszteles.html">Egységtesztelés</a></li>
+                    <li><a href="javadoc.html">JavaDoc</a></li>
+                    <li><a href="teszt.html">Teszt Intellij IDEA alatt</a></li>
+                    <li><a href="tesztpelda.html">Teszt példák</a></li>
+                </ul>
+            </div>
+            <h3>Egységtesztelés lépései:</h3>  
+            <div class="container">
+                <div class="box">
+                    <h5 class="cim">Értelmezési tartomány</h5> 
+                    <br>
+                    <p class="szoveg">
+                        Az a halmaz, amelynek az elemeihez a függvény hozzárendeli az értékkészlet elemeit/adatait.
+                    </p>
+                </div>
+                <div class="box">
+                    <h5 class="cim">Értékkészlet</h5>
+                    <br>
+                    <p class="szoveg">
+                        A függvény kijövő értékeinek halmaza azoknak az elemeknek a halmaza, amelyeket a függvény a bemenő értékeknek megfeleltet.
+                    </p>
+                </div>
+                <div class="box">
+                    <h5 class="cim">Értékpárok</h5>
+                    <br>
+                    <p class="szoveg">
+                        Értékpárok meghatározása, azaz adott bemenetre milyen kimenet legyen.
+                    </p>
+                </div>
+                <div class="box">
+                    <h5 class="cim">Teszt megírása</h5> 
+                    <br>
+                    <p class="szoveg">
+                        Megírjuk a teszt eseteket. Minden eshetőségre legyen benne példa értékpár.
+                    </p>
+                </div>
+                <div class="box">
+                    <h5 class="cim">Implementáció kód</h5>
+                    <br>
+                    <p class="szoveg">
+                        A metódus megírása, azaz a függvény elkészítése.
+                    </p>
+                </div>
+                <div class="box">
+                   <h5 class="cim">Tesztelés</h5>
+                   <br> 
+                   <p class="szoveg">
+                        Ha a teszt sikeres  akkor megyünk tovább, ha hibás akkor fel kell tárni mi akozza és javítani kell.
+                   </p>
+                </div>
+                <div class="box">
+                   <h5 class="cim">Refaktorálás</h5>
+                   <br>
+                   <p class="szoveg">
+                        Lényege a kész kódot olvashatóvá tétele. Törekedjünk az egyszerűségre.
+                   </p>
+                </div>
+                <div class="box">
+                    <h5 class="cim">Dokumentáció</h5>
+                    <br> 
+                    <p class="szoveg">
+                        Java DOC. Bővebben <a href="javadoc.html">itt,</a> 
+                    </p>
+                </div>
+            </div>
+            <h3>JUnit annotációk</h3>
+    <div class="container2">
+        <b>
+            @Test public void method():
+        </b> 
             <ul>
-                <li><a href="javaossze.html">Összefoglalás</a></li>
-                <li><a href="terheles.html">Terheléses tesztek</a></li>
-                <li><a href="egysegteszteles.html">Egységtesztelés</a></li>
-                <li><a href="javadoc.html">JavaDoc</a></li>
-                <li><a href="teszt.html">Teszt Intellij IDEA alatt</a></li>
-                <li><a href="tesztpelda.html">Teszt példák</a></li>
+                <li>
+                    A @Test annotáció egy metódust tesztmetódusként jelöl meg.
+                </li>
             </ul>
-        </div>
-        <h3>Egységtesztelés</h3>  
-        <p class="teszteles">Egy egységtesztelés tipikusan fejlesztői tesztelés: a tesztelendő programot fejlesztő<br>
-            programozó gyakorlatilag a programozási munkája szerves részeként készíti és futtatja az egységteszteket.<br>
-            Erre azért van szükség, hogy ő maga is meggyőződhessen arról, hogy amit leprogramozott, az valóban az<br>
-            elvárások szerint működik. Az egység tesztelésére létrehozott tesztesetek darabszáma önmagában nem minőségi<br>
-            kritérium: nem állíthatjuk bizonyossággal, hogy attól, mert több tesztesetünk van, nagyobb eséllyel találjuk<br>
-            meg az esetleges hibákat. Ennek oka, hogy a teszteseteinket gondosan meg kell tervezni.<br>
-            A JUnit 4.x egy automatizált tesztelési keretrendszer, ami annyit tesz, hogy a tesztjeinket is programokként<br>
-            megfogalmazva írjuk meg. Ha már egyszer elkészítettük őket, utána viszonylag kis költséggel tudjuk őket újra<br>
-            és újra, automatizált módon végrehajtani. A JUnit keretrendszer a tesztként lefuttatandó metódusokat<br>
-            annotációk segítségével ismeri fel, tehát tulajdonképpen egy beépített annotációfeldolgozót is tartalmaz.<br>
-            JUnit tesztfuttatója az összes, @Test annotációval ellátott metódust lefuttatja, azonban, ha töb ilyen is<br>
-            van, közöttük a sorrendet nem definiálja. Épp ezért tesztjeinket úgy célszerű kialakítani, hogy függetlenek<br>
-            legyenek egymástól, vagyis egyetlen tesztesetmetódusunkban se támaszkodjunk például olyan állapotra, amelyet<br>
-            egy másik teszteset állít be. Egy teszteset általában úgy épül fel, hogy a tesztmetódust az @org.junit.Test<br>
-            annotációval ellátjuk, a törzsében pedig meghívjuk a tesztelendő metódust, és a végrehajtás eredményeként<br>
-            kapott tényleges eredményt az elvárt eredménnyel össze kell vetni. A JUnit keretrendszer alapvetően csak egy<br>
-            parancssoros tesztfuttatót biztosít, de ezen felül nyújt egy API-t az integrált fejlesztőeszközök számára,<br>
-            amelynek segítségével azok grafikus tesztfuttatókat is implementálhatnak.
-        </p>
-        <h3>JUnit annotációk</h3>
-        <ul class="egyseg2">
-            <li><i>@Test public void method():</i>A @Test annotáció egy metódust tesztmetódusként jelöl meg.</li>
-            <li><i>@Test(expected = Exception.class) public void method():</i>A teszteset elbukik, ha a metódus nem dobja el az adott kivételt</li>
-            <li><i>@Test(timeout=100) public void method():</i>A teszt elbukik, ha a végrehajtási idő 100 ms-nál hosszabb</li>
-            <li><i>@Before public void method():</i>A teszteseteket inicializáló metódus, amely minden teszteset előtt le fog futni.</li>
-            <li><i>@After public void method():</i>Ez a metódus minden egyes teszteset végrehajtása után lefut, fő feladata az ideiglenes adatok törlése, alapértelmezések visszaállítása</li>
-            <li><i>@BeforeClass public static void method(): </i>Ez a metódus pontosan egyszer fut le.</li>
-            <li><i>@AfterClass public static void method(): </i>Pontosan egyszer fut le, miután az összes tesztmetódus, és a hozzájuk tartozó @After metódusok végrehajtása befejeződött</li>
-            <li><i>@Ignore</i> Figyelmen kívül hagyja a tesztmetódust, illetve tesztosztályt.</li>
-        </ul>
-        <h3> Az Assert osztály metódusai:</h3>
-        <ul class="egyseg2">
-        <ul>
-            <li><i>fail([String]):</i>Feltétel nélkül elbuktatja a metódust.</li>
-            <li><i>assertTrue([String], boolean):</i>Ellenőrzi, hogy a logikai feltétel igaz-e.</li>
-            <li><i>assertFalse([String], boolean):</i>Ellenőrzi, hogy a logikai feltétel hamis-e.</li>
-            <li><i>assertEquals([String], expected, actual):</i>Valós típusú elvárt és aktuális értékek egyezőségét vizsgálja, hogy belül van-e tűréshatáron.</li>
-            <li><i>assertArrayEquals([String], expected[], actual</i>Ellenőrzi, hogy a két tömb megegyezik-e</li>
-            <li><i>assertNull([message], object): </i>Ellenőrzi, hogy az ojektum null-e</li>
-            <li><i>assertNotNull([message], object): </i>Ellenőrzi, hogy az objektum nem null-e</li>
-            <li><i>assertSame([String], expected, actual):</i>Ellenőrzi, hogy az elvárt és a tényleges objektumok referencia szerint megegyeznek-e</li>
-            <li><i>assertNotSame([String], expected, actual):</i>Ellenőrzi, hogy az elvárt és a tényleges objektumok referencia szerint nem egyeznek-e meg</li>
-        </ul>
-    </ul>
-    <ul>
-        <li>
-            <ol>Parametrizált tesztek</ol>
-        </li>
-    </ul>
-        <ul class="egyseg">
-        <p>
-            A JUnit 4-es verziójában jelent meg a parametrizált tesztek készítésének lehetősége. Ezek célja, hogy lehetővé tegyék ugyanazon tesztesetek többszöri lefuttatását, persze rendre különböző értékekkel.
-        </p>
-        <p>
-            Parametrizált tesztek készítéséhez az alábbi öt tevékenységet kell elvégeznünk:
-        </p>
-        <ul>
-            <li>El kell látni a tesztosztályt a @RunWith(Parameterized.class) annotációval.</li>
-            <li>Készíteni kell egy olyan konstruktort, amely egy sornyi tesztadat információit képes befogadni.</li>
-            <li>Létre kell hozni egy, a @Parameters annotációval ellátott olyan publikus statikus metódust</li>
-            <li>Létre kell hozni a tesztmetódus(oka)t.</li>
-            <li>Ha parancssorból szeretnénk a tesztfuttatót végrehajtani, akkor szükségünk lesz még az org.junit.runner.JUnitCore osztály runClasses nevű statikus metódusára is</li>
-        </ul>
-    </ul>
-    <ul>
-        <li>
-            <ol>Kivételek tesztelése</ol>
-        </li>
-    </ul>
-        <ul class="egyseg">
-        <p>Néha előfordul, hogy az elvárt működéshez az tartozik, hogy a tesztelt program egy adott ponton kivételt dobjon.
-            Ha nem váltódik ki kivétel, vagy nem a várt kivétel váltódik ki, a teszt elbukik. Azaz ha kivétel nélkül jutunk el a metódus végére, a teszteset megbukik.</p>
-        <p>
-            Ha a kivétel üzenetének tartalmát akarjuk tesztelni, vagy a kivétel várt kiváltódásának helyét akarjuk szűkíteni arra ez a módszer nem jó. Ilyenkor tegyük a következőt:
-        </p>
-        <ul>
-            <li>kapjuk el a kivételt mi magunk,</li>
-            <li>használjuk a fail-t, ha egy adott pontra nem volna szabad eljutni,</li>
-            <li>a kivételkezelőben pedig nyerjük ki a kivétel szövegét, és hasonlítsuk az elvárt szöveghez.</li>
-        </ul>
-    </ul>
-    <ul>
-        <li>
-            <ol>Tesztkészletek létrehozása</ol>
-        </li>
-    </ul>
-        <ul class="egyseg">
-        <p>
-            Egy tesztkészlet (test suite) alatt összetartozó és együttesen végrehajtandó teszteseteket értünk. Ez akkor igazán hasznos, ha egy összetettebb funkció teszteléséhez számos, a részfunkciókat tesztelő teszteset tartozik, amelyeket ilyenkor sokszor különálló osztályokba szervezünk a könnyebb áttekinthetőség érdekében. A különböző tesztosztályokban elhelyezett teszteket azonban mégis szeretnénk együttesen (is) lefuttatni, amelyhez egy olyan tesztosztályra van szükségünk, amelyet a @RunWith(Suite.class) és a @Suite.SuiteClasses annotációkkal is el kell látnunk. Az előbbi a JUnit tesztfuttatónak mondja meg, hogy tesztkészlet végrehajtásáról lesz szó, míg a második paraméteréül a tesztkészletet alkotó tesztosztályok osztályliteráljait adjuk.
-        </p>
-    </ul>
-    <ul>
-        <li>
-            <ol>JUnit antiminták</ol>
-        </li>
-    </ul>
-        <ul class="egyseg">
-        <p>
+        <b>
+            @Test(expected = Exception.class) public void method():
+        </b> 
+            <ul>
+                <li>
+                    A teszteset elbukik, ha a metódus nem dobja el az adott kivételt.
+                </li>
+            </ul>
+        <b>
+            @Test(timeout=100) public void method():
+        </b> 
+            <ul>
+                <li>
+                    A teszt elbukik, ha a végrehajtási idő 100 ms-nál hosszabb.
+                </li>
+            </ul>
+        <b>
+            @Before public void method():
+        </b> 
+            <ul>
+                <li>
+                    A teszteseteket inicializáló metódus, amely minden teszteset előtt le fog futni.
+                </li>
+            </ul>
+        <b>
+            @After public void method():
+        </b> 
+            <ul>
+                <li>
+                    Ez a metódus minden egyes teszteset végrehajtása után lefut, fő feladata az ideiglenes adatok törlése, alapértelmezések visszaállítása.
+                </li>
+            </ul>
+        <b>
+            @BeforeClass public static void method():
+        </b> 
+            <ul>
+                <li>
+                    Ez a metódus pontosan egyszer fut le.
+                </li>
+            </ul>
+        <b>
+            @AfterClass public static void method():
+        </b> 
+            <ul>
+                <li>
+                    Pontosan egyszer fut le, miután az összes tesztmetódus, és a hozzájuk tartozó @After metódusok végrehajtása befejeződött.
+                </li>
+            </ul>
+        <b>
+            @Ignore
+        </b> 
+            <ul>
+                <li>
+                    Figyelmen kívül hagyja a tesztmetódust, illetve tesztosztályt.
+                </li>
+            </ul> 
         
-            A JUnit bemutatott eszközeinek segítségével viszonylag alacsony költséggel tudunk inkrementális módon olyan tesztkészletet fejleszteni, amellyel mérhetjük az előrehaladást, kiszúrhatjuk a nem várt mellékhatásokat, és jobban koncentrálhatjuk a fejlesztési erőfeszítéseinket. Az a többletkódolás, amit a tesztesetek kialakítása érdekében kell megtennünk, valójában általában gyorsan behozza az árát és hatalmas előnyöket biztosít fejlesztési projektjeink számára. Mindez persze csak akkor lesz, lehet így, amennyiben az egységteszteink jól vannak megírva – éppen ezért érdemes megvizsgálni, hogy melyek azok a tevékenységek, amelyek a leggyakoribb hibákat jelentik az egységtesztelés során. Ha ezekkel tisztában vagyunk, remélhetőleg már nem követjük el őket mi magunk is.
-        </p>
-    </ul>
-    <ul>
-        <li>
-            <ol>Rosszul kezelt állítások</ol>
-        </li>
-    </ul>
-        <ul class="egyseg">
-        <p>
-            A JUnit tesztek alapvető építőelemei az állítások (assertion-ök), amelyek olyan logikai kifejezések, amik ha hamisak, az valamilyen hibát jelez. Az egyik legnagyobb hiba velük kapcsolatban az, ha kézi ellenőrzést végzünk. Ez általában úgy jelenik meg (innen ismerhetünk rá), hogy a tesztmetódus viszonylag sok utasítást tartalmaz, azonban állítást egyet sem. Ilyenkor a fejlesztő a tesztet elsősorban arra használja, hogy ha valamilyen hiba (például egy kivétel) a teszt végrehajtása során bekövetkezik, akkor kézzel elkezdhesse debugolni. Ez a megközelítés azonban pontosan a tesztautomatizálás lényegét és egyben legnagyobb előnyét veszi el, nevezetesen, hogy tesztjeinket a háttérben, minde külső beavatkozás nélkül kvázi folyamatosan futtassuk. A kézi ellenőrzések másik tünete, ha a tesztek viszonylag nagy mennyiségű adatot írnak a szabványos kimenetre vagy egy naplóba, majd ezeket kézzel ellenőrzik, hogy minden rendben zajlott-e. Ehhez nagyon hasonló ellenminta a hiányzó állítások esete, amikor egy tesztmetódus nem tartalmaz egyetlen utasítást sem. Ezek a helyzetek kerülendőek.
-            Nem csak a túl kevés, de a túl sok állítás is problémás lehet: ha egy tesztmetódusban több állítás is van, az általában azt jelenti, hogy a tesztmetódus túl sokat próbál tesztelni. Ezt orvosolhatjuk, ha szétvágjuk a tesztmetódust több tesztmetódusra.
-        </p>
-    </ul>
-    <ul>
-        <li>
-            <ol>Túlbonyolított tesztek</ol>
-        </li>
-    </ul>
-        <ul class="egyseg">
-        <p>
-            Az egységtesztek kódjának az éles rendszer kódjához hasonlóan könnyen érthetőnek kell lennie. Általánosságban azt mondhatjuk, hogy egy programozónak a lehető leggyorsabban meg kell értenie egy teszt célját. Ha egy teszt olyan bonyolult, hogy nem tudjuk azonnal megmondani róla, jó-e vagy sem, akkor nehéz megállapítani, hogy egy sikertelen tesztvégrehajtás a tesztelendő vagy a tesztelő kód rossz mivolta miatt következett-e be. Vagy ami még ennél is rosszabb, fennáll a lehetősége annak, hogy egy kód úgy megy át egy teszten, hogy nem volna neki szabad.
-            A túlbonyolított tesztek egyszerűsítését ugyanúgy végezzük, mint bármilyen más túlbonyolított kód egyszerűsítését: kódújraszervezést (refaktorálást) hajtunk végre a minél könnyebben érthető kód érdekében. Általában ezt a lépéssorozatot mindaddig végezzük, mígnem könnyen felismerhető módon a következő szerkezettel fog rendelkezni:
-        </p>
-        <ul>
-            <li>Inicializálás (set up)</li>
-            <li>Az elvárt eredmények deklarálása</li>
-            <li>A tesztelendő egység meghívása</li>
-            <li>A tevékenység eredményeinek beszerzése</li>
-            <li>Állítás megfogalmazása az elvárt és a tényleges eredményről.</li>
-        </ul>
-    </ul>
-    <ul>
-        <li>
-            <ol>Külső függőségek</ol>
-        </li>
-    </ul>
-        <ul class="egyseg">
-        <p>
-            Annak érdekében, hogy a kód helyesen működjön, számos külső függőségre kell támaszkodnia, például függhet:
-        </p>
-        <ul>
-            <li>egy bizonyos dátumtól vagy időtől</li>
-            <li>egy harmadik fél által készített jar formátumú programkönyvtártól</li>
-            <li>egy állománytól</li>
-            <li>egy adatbázistól</li>
-            <li>a hálózati kapcsolattól</li>
-            <li>egy webszervertől</li>
-            <li>egy alkalmazásszervertől</li>
-            <li>a véletlentől</li>
-        </ul>
-        <p>
-            Az egységtesztek a tesztelési hierarchia legalsó szintjén helyezkednek el, a céljuk az, hogy kis mennyiségű kóddal izoláltan próbára tegyék az éles kód egy kis részét, vagyis az egységet. A magasabb szintű teszteléssel szemben az egységtesztelés célja tehát csakis önálló egységek ellenőrzése. Minél több függőségre van egy egységnek szüksége a futtatásához, annál nehezebb igazolni a megfelelő működést.
-            Az egységtesztek hatékonyságának jó mérőszáma, hogy egy kezdő fejlesztő mennyi idő alatt jut el a tesztek lefuttatásához onnantól kezdve, hogy a verziókezelő rendszerből beszerezte a kódokat.Ökölszabály, hogy a külső függőségeket el kell kerülni.                 
-        </p>
-        <p>
-            Ennek érdekében az alábbiakat tehetjük:
-        </p>
-        <ul>
-            <li>a harmadik fél által készített könyvtáraktól való függés elkerüléséhez használjunk tesztduplázókat (test doubles), például mock objektumokat</li>
-            <li>biztosítsuk, hogy a tesztadatok a tesztkóddal együtt kerülnek csomagolásra</li>
-            <li>kerüljük el az adatbázishívásokat egységtesztjeinkben</li>
-            <li>ha mindenképpen adatbázisra van szükségünk, használjunk memóriában tárol adatbázist</li>
-        </ul>
-    </ul>
-        <h3>Nem várt kivételek elkapása</h3>
-        <ul class="egyseg2">
-        <p>
-            Míg az éles kód írásakor a fejlesztők általában tudatában vannak az el nem kapott kivételek problémáinak, ezért elég szorgalmasan elkapogatják és naplózzák a problémákat!
-        </p>
-        </div>
     </div>
-    
-    
+            <h3> Az Assert osztály metódusai:</h3>
+            <div class="container2">
+                <b>
+                    assertTrue([String], boolean):
+                </b> 
+                    <ul>
+                        <li>
+                            Ellenőrzi, hogy a logikai feltétel igaz-e.
+                        </li>
+                    </ul>
+                <b>
+                    assertFalse([String], boolean):
+                </b> 
+                    <ul>
+                        <li>
+                            Ellenőrzi, hogy a logikai feltétel hamis-e.
+                        </li>
+                    </ul>
+                <b>
+                    assertEquals([String], expected, actual):
+                </b> 
+                    <ul>
+                        <li>
+                            Valós típusú elvárt és aktuális értékek egyezőségét vizsgálja, hogy belül van-e tűréshatáron.
+                        </li>
+                    </ul>
+                <b>
+                    assertArrayEquals([String], expected[], actual
+                </b> 
+                    <ul>
+                        <li>
+                            Ellenőrzi, hogy a két tömb megegyezik-e.
+                        </li>
+                    </ul>
+                <b>
+                    assertNull([message], object): 
+                </b> 
+                    <ul>
+                        <li>
+                            Ellenőrzi, hogy az ojektum null-e.
+                        </li>
+                    </ul>
+                <b>
+                    assertNotNull([message], object): 
+                </b> 
+                    <ul>
+                        <li>
+                            Ellenőrzi, hogy az objektum nem null-e.
+                        </li>
+                    </ul>
+                <b>
+                    assertSame([String], expected, actual):
+                </b> 
+                    <ul>
+                        <li>
+                            Ellenőrzi, hogy az elvárt és a tényleges objektumok referencia szerint megegyeznek-e.
+                        </li>
+                    </ul>
+                <b>
+                    assertNotSame([String], expected, actual):
+                </b> 
+                    <ul>
+                        <li>
+                            Ellenőrzi, hogy az elvárt és a tényleges objektumok referencia szerint nem egyeznek-e meg.
+                        </li>
+                    </ul> 
+    </div>
 </body>
 
 </html>

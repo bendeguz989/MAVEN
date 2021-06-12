@@ -6,7 +6,7 @@
 }
 body{
     width: 100%;
-    background-image: linear-gradient(rgb(0,0,0,0.75), rgb(0,0,0,0.75)),url(kepek/javadoc.jpg);;
+    background-image: linear-gradient(rgb(0,0,0,0.75), rgb(0,0,0,0.75)),url(kepek/fal.jpg);;
     background-size: cover;
     background-position: center;
 }
@@ -41,7 +41,7 @@ h3 {
 }
 .banner{
     width: 100%;
-    background-image: linear-gradient(rgb(0,0,0,0.75), rgb(0,0,0,0.75)),url(kepek/javadoc.jpg);;
+    background-image: linear-gradient(rgb(0,0,0,0.75), rgb(0,0,0,0.75)),url(kepek/fal.jpg) ;
     background-size: cover;
     background-position: center;
 }

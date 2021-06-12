@@ -1,18 +1,19 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Roboto Mono', monospace;
     color: #fff;
+
 }
 body{
     width: 100%;
-    background-image: linear-gradient(rgb(0,0,0,0.75), rgb(0,0,0,0.75)),url(kepek/egysegteszt.jpg);
+    background-image: linear-gradient(rgb(0,0,0,0.75), rgb(0,0,0,0.75)),url(kepek/fal.jpg);
     background-size: cover;
     background-position: center;
 }
 .banner{
     width: 100%;
-    background-image: linear-gradient(rgb(0,0,0,0.75), rgb(0,0,0,0.75)),url(kepek/egysegteszt.jpg);
+    background-image: linear-gradient(rgb(0,0,0,0.75), rgb(0,0,0,0.75)),url(kepek/fal.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -23,14 +24,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.egyseg {
-    text-align: left;
-    margin-left: 2px;
-    letter-spacing: 3px;
-    font-size: 16px;
-    background-color: #5841414d;
-    border: 3px solid #009688; 
 }
 ol{
     color: #CEF0D4; font-family: 'Rouge Script', cursive; font-size: 25px; font-weight: normal; line-height: 48px; margin: 0 0 0px; text-align: left; text-shadow: 1px 1px 2px #7907fc
@@ -50,15 +43,8 @@ i {
     font-size: 16px;
     background-color: #ff07074d;
 }
-.teszteles{
-    text-align: center;
-    font-size: 18px;
-    letter-spacing: 3px;
-    display: block;
-    overflow: auto;
-}
 h3 { 
-    color: #009688; 
+    color: white; 
     font-family: 'Droid serif', serif; 
     font-size: 36px; 
     font-weight: 400; 
@@ -81,6 +67,7 @@ h3 {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
+    font-family: sans-serif;
 }
 .navbar ul li::after{
     content: '';
@@ -94,4 +81,54 @@ h3 {
 }
 .navbar ul li:hover::after{
     width: 100%;
+}
+
+.container{
+    width: 90%;
+    padding: 20px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box{
+    width: 200px;
+    height: 160px;
+    background:linear-gradient(rgb(0,0,0,0.30), rgb(0,0,0,0.30));
+    margin: 0px 10px;
+    transition: 1.5s;
+}
+.box:hover{
+    transform: scale(1.3);
+    z-index: 2;
+    box-shadow: 2px 2px 2px #000;
+    
+}
+.cim{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 16.5px;
+    color: #009688;
+}
+.szoveg{
+    font-family: 'Roboto Mono', monospace;
+    text-align:left;
+    color:white;
+    font-size: 12px;
+    padding: 2px;
+}
+.container2{
+    width: 70%;
+    padding: 10px;
+    margin: 100px auto;
+    display:block;
+    flex-direction: row;
+    justify-content: center;
+    background:linear-gradient(rgb(0,0,0,0.30), rgb(0,0,0,0.30));
+    
+}
+b{
+    color: #009688;
+    font-family: sans-serif;
 }

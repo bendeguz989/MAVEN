@@ -16,7 +16,6 @@
             <a href="index.html"><img src="kepek/logo.png" class="logo"></a>
             <ul>
                 <li><a href="javaossze.html">Összefoglalás</a></li>
-                <li><a href="terheles.html">Terheléses tesztek</a></li>
                 <li><a href="egysegteszteles.html">Egységtesztelés</a></li>
                 <li><a href="javadoc.html">JavaDoc</a></li>
                 <li><a href="teszt.html">Teszt Intellij IDEA alatt</a></li>
@@ -45,21 +44,6 @@
                 <li>szabványos HTML TAG-eket lehet használni a leíró részben.</li>
             </ul>
             </p>
-            <h3>Dokumentációs megjegyzés felépítése</h3>
-
-            <h3 class="tag">Fő leírás (main description)</h3>
-            <ul class="lista">
-                A /** határoló után kezdődik és a címke szakasz elejéig tart, annak hiányában <br>A */ határolóig.
-                <br>Az első
-                mondat a dokumentált entitás (például osztály, metódus) tömör összefoglalását kell, hogy tartalmazza.
-            </ul>
-            <h3 class="tag">Címke szakasz (tag section)</h3>
-            <ul class="lista">Az első olyan @ karakterrel kezdődik, amely a sor elején jelenik meg, ha elhagyjuk annak
-                elejéről a
-                vezető * karaktereket, a whitespace karaktereket és a /** határolót.<br>A dokumentációs megjegyzésekben
-                használható speciális kulcsszavak, melyekben a kis és nagybetűk különbözőek!
-            </ul>
-            </ul>
             </p>
             <div>
                 <h3>Kétfajta címke használható:</h3>
@@ -72,7 +56,7 @@
                             @serial/@serialField/@serialData <br>@deprecated</i>
                 </ul>
                 </ul>
-                <ol>@author szöveg:</ol>
+                <ol>@author szöveg: </ol>
                 <ul class="javadoc">
                     <li>Szerzők nevének megadására szolgáló címke, melyből egy dokumentációs megjegyzésben több
                         is előfordulhat.</li>
@@ -175,16 +159,8 @@
                     <li>Az adott konstans adattag értékét szolgáltatja, csak final módosító esetén használható.
                     </li>
                 </ul>
-                </li>
-                </ul>
             </div>
-            <h3>API dokumentáció generálása</h3>
-            <ul class="javadoc">
-                <ol>JavaDoc</ol>
-                <ol>Apache Maven</ol>
-            </ul>
         </div>
-
 </body>
 
 </html>

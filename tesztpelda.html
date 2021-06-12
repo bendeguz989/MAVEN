@@ -19,36 +19,91 @@
                 <a href="index.html"><img src="kepek/logo.png" class="logo"></a>
                 <ul>
                     <li><a href="javaossze.html">Összefoglalás</a></li>
-                    <li><a href="terheles.html">Terheléses tesztek</a></li>
                     <li><a href="egysegteszteles.html">Egységtesztelés</a></li>
                     <li><a href="javadoc.html">JavaDoc</a></li>
                     <li><a href="teszt.html">Teszt Intellij IDEA alatt</a></li>
                     <li><a href="tesztpelda.html">Teszt példák</a></li>
                 </ul>
             </div>
-            <div class="card">
-                <div class="image">
-                    <a href="kepek/1.peldakep.png" target="_blank"><img src="kepek/1.peldakep.png"
-                            class="img-fluid"></a>
-                </div>
+            <div class="container">
+                 <pre class="code1">
+                    @Test
+                    @DisplayName("Matches tesztelés")
+                    public void mintaIllesztesTesztelese(){
+                        String testString = "abc";
+                        asserTrue( teststring.matches(".{3}"));
+                        asserTrue( teststring.matches(".{1,3}"));
+                        asserTrue( teststring.matches(".{0,}"));
+                        String rendszam = "AB-3423";
+                        asserTrue( rendszam.matches("[A-Z]{1,5}-[0-9]{1,5}"));
+                        assertEquals( 7, rendszam.length());
+                       }
+                }
+                </pre>
+                <pre class="code1">
+                    @Test
+                    public void tesztNegyzet(){
+                        assertEquals( 0, this.negyzet(0));
+                        assertEquals( 0, this.negyzet(-5));
+                        assertEquals( 1, this.negyzet(1));
+                        assertEquals( 1, this.negyzet(2));
+                        assertEquals( 3, this.negyzet(9));
+                        assertEquals( 3, this.negyzet(10));
+                        assertEquals( 10, this.negyzet(100));
+                       }
+                    
+                    private int negyzeet(int darab){
+                        if (darab <1) {
+                                return 0;
+                        } else {
+                            int oldal = (int)Math.sqrt((double)darab);
+                            return oldal;
+                        }
+                    }
+                }
+                </pre>
             </div>
-            <div class="card">
-                <div class="image">
-                    <a href="kepek/2.peldakep.png" target="_blank"><img src="kepek/2.peldakep.png"
-                            class="img-fluid"></a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <a href="kepek/3.peldakep.png" target="_blank"><img src="kepek/3.peldakep.png"
-                            class="img-fluid"></a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <a href="kepek/4.peldakep.png" target="_blank"><img src="kepek/4.peldakep.png"
-                            class="img-fluid"></a>
-                </div>
+            <div class="container">
+                <pre class="code1">
+                    @Test 
+                    public void testPercek(){
+                        assertions.assertequals(0 , this.atalakit ( 0 , 0 ));
+                        assertions.assertequals(-1 , this.atalakit ( -1 , 0 ));
+                        assertions.assertequals(-1 , this.atalakit ( 0 , -5 ));
+                        assertions.assertequals(-1 , this.atalakit ( -1 , -5 ));
+                        assertions.assertequals(-1 , this.atalakit ( 24 , -5 ));
+                        assertions.assertequals(-1 , this.atalakit ( 24 , 645 ));
+                        assertions.assertequals(-1 , this.atalakit ( -1 , 0 ));
+                        assertions.assertequals(0 , this.atalakit ( 0 , 0 ));
+                        assertions.assertequals(180 , this.atalakit ( 3 , 0 ));
+                        assertions.assertequals(15 , this.atalakit ( 0 , 15 ));
+                        assertions.assertequals(731 , this.atalakit ( 12 , 11 ));
+                    }
+                
+                    private int atalakit(int ora, int perc){
+                        if (ora >= && ora <= 24 {
+                        return perc >= 0 && perc <= 59 ? 60 * ora + perc : -1;
+                        } else {
+                        return -1;
+                        }
+                    }
+                </pre>
+                <pre class="code1">
+                    public class testTermek {
+        
+                        Termek cipo;
+                    
+                        @BeforeEach
+                        public void myInit(){
+                            cipo = new Termek ( 3, 10000, "nő topán");
+                        }
+                    
+                    
+                        @Test
+                        @DisplayName ("érték teszt")
+                        public void ertekTeszt() { assertEquals ( 30000,cipo.ertek();}
+                    }
+                </pre>
             </div>
         </div>
     </div>

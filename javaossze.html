@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="javaossze.css">
     <link rel="icon" href="kepek/mavenfavicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap" rel="stylesheet">
     <title>Összefoglalás</title>
 </head>
 
@@ -16,156 +18,157 @@
             <a href="index.html"><img src="kepek/logo.png" class="logo"></a>
             <ul>
                 <li><a href="javaossze.html">Összefoglalás</a></li>
-                <li><a href="terheles.html">Terheléses tesztek</a></li>
                 <li><a href="egysegteszteles.html">Egységtesztelés</a></li>
                 <li><a href="javadoc.html">JavaDoc</a></li>
                 <li><a href="teszt.html">Teszt Intellij IDEA alatt</a></li>
                 <li><a href="tesztpelda.html">Teszt példák</a></li>
             </ul>
         </div>
-        <div>
-            <h3>Tesztelés</h3>
-            <p class="teszteles">A tesztelés, mint folyamat beépítése a szoftverfejlesztési projektekbe azért is fontos,
-                mert a
-                fejlesztők
-                a saját maguk által írt programkódjukat egyszerűen képtelenek más szemszögből nézni. Még a jól
-                felépített koncepcióba is csúszhatnak hibák, ezért kritikus fontosságú, hogy az elkészült terméket
-                egy
-                különálló, de természetesen a funkcionális specifikációt ismerő tesztelő csoport tesztelje.
-                A tesztelésekkel kapcsolatban általánosan ismert követelmények a józan ész és a tapasztalatok
-                alapján
-                kialakult alapelvek köré csoportosulnak ezek a következőek:
-
-            <ul class="lista">
-
-                <li>1. Mindig tervezettnek és megismételhetőnek kell lennie.</li>
-                <li>2. Más (is) teszteljen, mint aki fejlesztett.</li>
-                <li>3. Az egyes komponensek tesztelésétől kell haladni a teljes rendszer tesztelése felé. Érdemes a
-                    komponenseket külön letesztelni összeállítás előtt.</li>
-                <li>4. A komponensek még értelmezhető kisebb egységeinek tesztelését érdemes meghagyni fejlesztői
-                    tesztként, mert ilyen mélységben csak a fejlesztők ismerik a kódot</li>
-                <li>5. A funkcionális működés ellenőrzésén túl szükség van a fejlesztett termék integrációs tesztjére a
-                    működési környezetbe helyezéskor.</li>
-                <li>6. A funkcionalitás megfelelőségének ellenőrzésén felül a terhelhetőség (teljesítmény) és a stabil
-                    működés (fenntarthatóság) ellenőrzése is fontos.</li>
-            </ul>
-            </p>
-            <h3>Komponens (modul) tesztelés</h3>
-            <p class="teszteles">
-                A komponensek belső működésének ellenőrzése a strukturális tesztek fogalomkörébe tartozik. Mivel a
-                fejlesztett alkalmazás belső struktúráját vizsgáljuk, ezért white-box teszteknek is nevezik őket.
-                Célszerűen a különálló modulok egy egységbe építését megelőzően használható módszer. A komponens-szintű
-                tesztelés lényege, hogy a szoftver metódusait, azok működését tesztesetekben meghatározott
-                tesztértékekkel ellenőrizzük. A JUnit az egyik legelterjedtebb keretrendszer, amit az egyes komponensek
-                tesztelésére használnak.
-                A JUnit-ban hierarchikusan rendezett tesztesetekből állíthatunk össze tesztkészleteket (test suite),
-                amelyekben a teszteseteket együtt futtathatjuk. A tesztek ellenőrzésére szolgálnak az ún.
-                Assert-metódusok, amelyekkel a teszt eredményét hasonlítjuk össze az elvárt eredménnyel.
-            <div>
-                <h3>_________________________________________________________________________________________________________
-                </h3>
+        <p>
+            <h3>Tesztelés:</h3>
+        </p>
+        <div class="container">
+            <div class="box">
+                 <br>
+                    <p class="szoveg2">
+                        A tesztelés a szoftverfejlesztés elengedhetetlen része. Ezért minden szoftvert alaposan tesztelni szükséges.
+                        Gyakran a tesztelés TDD módszerrel történik.
+                        A tesztelésekkel kapcsolatban általánosan ismert követelmények alapján
+                        kialakult alapelvek köré csoportosulnak ezek a következőek:
+                        <br>
+                        1. Mindig tervezettnek és megismételhetőnek kell lennie.
+                        <br>
+                        2. Aki fejlesztett az teszteljen.
+                        <br>
+                        3. Az egyes komponensek tesztelésétől kell haladni a teljes rendszer tesztelése felé. Érdemes a
+                            komponenseket külön letesztelni összeállítás előtt.
+                        <br>
+                        4. A komponensek még értelmezhető kisebb egységeinek tesztelését érdemes meghagyni fejlesztői
+                            tesztként, mert csak a fejlesztők ismerik a kódot.
+                        <br>
+                        5. A funkcionális működés ellenőrzésén túl szükség van a fejlesztett termék integrációs tesztjére a
+                            működési környezetbe helyezéskor.
+                        <br>
+                        6. A funkcionalitás megfelelőségének ellenőrzésén felül a terhelhetőség  és a stabil
+                            működés ellenőrzése is fontos.
+                        <br>
+                    </p>
             </div>
-            </p>
-            <h3>Funkcionális (rendszer) tesztelés</h3>
-            <p class="teszteles">
-                A funkcionális tesztekre akkor kerülhet sor, ha az összeállított alkalmazás egyes komponensei unit és
-                modulszinten (modul alatt itt pl. egymásra ható unitokat értünk) megfelelően működnek.
-                A funkcionális tesztelés már jobban elkülöníthető a fejlesztőktől. Általános esetben egy különálló
-                tesztcsapat feladata, hogy a tesztelésre kapott rendszer üzleti funkcionalitását figyelembe véve, de
-                magát a megvalósítási módot fekete dobozként kezelve megvizsgálja az egyes funkciók működését. Ismerve a
-                lehetséges bemeneteket, le kell ellenőrizni a lehetséges kimeneteket. A funkcionális tesztek egy-egy
-                tesztesetre építve egy-egy felhasználói funkció, üzleti folyamat lépéseit ellenőrzik.
-            <div>
-                <h3>_________________________________________________________________________________________________________
-                </h3>
+        </div>
+        <p>
+            <h3>Komponens (modul) tesztelés:</h3>
+        </p>
+        <div class="container">
+            <div class="box">
+                 <br>
+                    <p class="szoveg2">
+                        A komponensek belső működésének ellenőrzése a strukturális tesztek fogalomkörébe tartozik. Mivel a
+                        fejlesztett alkalmazás belső struktúráját vizsgáljuk, ezért white-box teszteknek is nevezik őket.
+                        A komponens-szintű
+                        tesztelés lényege, hogy a szoftver metódusait, azok működését tesztesetekben meghatározott
+                        tesztértékekkel ellenőrizzük. A JUnit az egyik legelterjedtebb keretrendszer, amit az egyes komponensek
+                        tesztelésére használnak.
+                        A JUnit-ban hierarchikusan rendezett tesztesetekből állíthatunk össze tesztkészleteket (test suite),
+                        amelyekben a teszteseteket együtt futtathatjuk. A tesztek ellenőrzésére szolgálnak az ún.
+                        Assert-metódusok, amelyekkel a teszt eredményét hasonlítjuk össze az elvárt eredménnyel.
+                    </p>
+            </div>
+        </div>
+        <p>
+            <h3>Funkcionális (rendszer) tesztelés:</h3>
+        </p>
+        <div class="container">  
+            <div class="box">
+                <br>
+                    <p class="szoveg2">
+                        A funkcionális tesztekre akkor kerülhet sor, ha az összeállított alkalmazás egyes komponensei unit és
+                        modulszinten (modul alatt itt pl. egymásra ható unitokat értünk) megfelelően működnek.
+                        A funkcionális tesztelés már jobban elkülöníthető a fejlesztőktől. Általános esetben egy különálló
+                        tesztcsapat feladata, hogy a tesztelésre kapott rendszer üzleti funkcionalitását figyelembe véve, de
+                        magát a megvalósítási módot fekete dobozként kezelve megvizsgálja az egyes funkciók működését. Ismerve a
+                        lehetséges bemeneteket, le kell ellenőrizni a lehetséges kimeneteket. A funkcionális tesztek egy-egy
+                        tesztesetre építve egy-egy felhasználói funkció, üzleti folyamat lépéseit ellenőrzik.   
+                    </p>
+            </div>
+        </div>        
+                
             </div>
             </p>
             <h3>A funkcionális tesztek:</h3>
             <p>
-            <ul>
-                <li>
-                    <ol>Ekvivalencia osztályok alapján történő tesztelés</ol>
-                </li>
-            </ul>
-            <ul class="teszteles_csoport">
-                A program bemeneti paramétereit a specifikáció szerint felállított ún. ekvivalencia-osztályokra (azonos
-                viselkedési jelleggel bíró értékek halmazaira; pl. ilyenek az intervallumok) osztjuk, majd minden
-                osztályból
-                tesztértékeket véve teszteseteket készítünk. A jól megválogatott tesztesetek (pl. érvényes-érvénytelen,
-                határérték-középérték) így a lehetséges inputokat nagymértékben lefedik, így egy olyan halmazt állítunk
-                elő
-                a teszteléshez, amely a lehető legtöbb hibát felderítheti.
-            </ul>
-            <ul>
-                <li>
-                    <ol>Határérték tesztelés</ol>
-                </li>
-            </ul>
-            </ul>
-            <ul class="teszteles_csoport">Tulajdonképpen az ekvivalencia osztályok alkalmazásának speciális esete,
-                ugyanis az osztályok határértékeire
-                fókuszálva, a hibák rendszerint itt sűrűsödnek. Határérték-tesztelésnél a kimeneti értékek vizsgálata is
-                szükséges lehet, azaz érdemes a tesztekhez olyan bemeneti értékeket is választani, ami a kimeneti
-                határértékeket fogja vizsgálni.
-            </ul>
-            <ul>
-                <li>
-                    <ol>Ok-okozati tesztelés</ol>
-                </li>
-            </ul>
-
-            <ul class="teszteles_csoport"> A funkcionális tesztelés talán legfontosabb célja, hogy kiderüljön, milyen
-                bemeneti paraméterek hatására mi
-                történik a kimeneten. Ennek vizsgálatára egy ok-okozati gráfot vagy táblázatot célszerű készíteni, amit
-                a
-                tesztesetek kidolgozásakor használhatunk. Természetesen a lehetséges bemeneti-kimeneti kombinációk száma
-                óriási lehet, ezért sokszor szinte képtelenség minden egyes esetet megvizsgálni. Ezért fontos azoknak a
-                teszteset-kombinációknak az összeállítása, amelyekkel a leghatékonyabban tudjuk feltérképezni a
-                hiányosságokat, illetve a specifikációnak ellentmondó hibákat.
-                Az így összeállított teszteseteket egy ún. tesztlefedési mátrixon megjelenítve feltérképezhetjük, hogy
-                az
-                adott teszt(eset) mely funkció(k) vizsgálatára alkalmas, valamint hogy maradt-e ellenőrzés nélküli
-                funkció.
-            </ul>
-            <ul>
-                <li>
-                    <ol>Véletlenszerű tesztelés</ol>
-                </li>
-            </ul>
-            <ul class="teszteles_csoport">A véletlenszerűen előállított tesztadatokkal elvégzett vizsgálatok célja
-                azoknak a hibáknak a feltárása,
-                amelyek a determinisztikus tesztek tervezésénél esetleg elkerülték a figyelmet. A véletlenszerű
-                tesztelés
-                hibafeltáró képessége rendszerint alacsony, de általában megéri a ráfordítást, mert a tesztadatok
-                (véletlen
-                számok) viszonylag gyors előállítása újabb területen fedheti fel az eddig elrejtett hibákat.
-                A funkcionális tesztelés, a tesztesetek végrehajtása részben automatizálható, azonban néhány esetben
-                szükségszerű lehet a manuális tesztelés is, mint kiegészítő módszer.
-            </ul>
-            <ul>
-                <li>
-                    <ol>Miért hasznos a tesztelés automatizálása?</ol>
-                </li>
-            </ul>
-            <ul class="teszteles_csoport">Függetlenül a tesztelés módszerétől, javítások után gyakori a regressziós
-                tesztelés szükségessége, a
-                tesztesetek akárhányszor futtathatók, valamint lerövidül a visszajelzések ideje a fejlesztők számára,
-                így
-                hatékonyabbá válik a fejlesztési folyamat
-            </ul>
-            <ul>
-                <li>
-                    <ol>Selenium</ol>
-                </li>
-            </ul>
-            <ul class="teszteles_csoport">A webes alkalmazások automatikus tesztelésére használható eszközök egyike a
-                Selenium, amellyel funkcionális
-                teszteket is végre tudunk hajtani.
-                A Selenium segítségével a leggyakrabban használt webes böngészőkben futtathatunk egy-egy tesztesetet
-                vagy
-                egész tesztforgatókönyvet is úgy, mintha egy felhasználó futtatná őket. A Selenium többféle operációs
-                rendszert is támogat, így felhasználhatósága széleskörűnek mondható a webes felületek tesztelésében.
-            </ul>
+                <div>
+                    <section id="slider">
+                        <input type="radio" name="slider" id="s1" checked>
+                        <input type="radio" name="slider" id="s2">
+                        <input type="radio" name="slider" id="s3">
+                        <input type="radio" name="slider" id="s4">
+                        <input type="radio" name="slider" id="s5">
+                
+                        <label for="s1" id="slide1"> 
+                            <p class="szoveg">
+                                <b class="cim">Ekvivalencia osztályok alapján történő tesztelés:</b> 
+                                <br>
+                                program bemeneti paramétereit a specifikáció szerint felállított ún. ekvivalencia-osztályokra (azonos
+                                viselkedési jelleggel bíró értékek halmazaira; pl. ilyenek az intervallumok) osztjuk, majd minden
+                                osztályból
+                                tesztértékeket véve teszteseteket készítünk. A jól megválogatott tesztesetek (pl. érvényes-érvénytelen,
+                                határérték-középérték) így a lehetséges inputokat nagymértékben lefedik, így egy olyan halmazt állítunk
+                                elő
+                                a teszteléshez, amely a lehető legtöbb hibát felderítheti.
+                            </p>
+                        </label>
+                        <label for="s2" id="slide2">
+                            <p class="szoveg">
+                                <b class="cim">Határérték tesztelés:</b> 
+                                <br>
+                                Tulajdonképpen az ekvivalencia osztályok alkalmazásának speciális esete,
+                            ugyanis az osztályok határértékeire
+                            fókuszálva, a hibák rendszerint itt sűrűsödnek. Határérték-tesztelésnél a kimeneti értékek vizsgálata is
+                            szükséges lehet, azaz érdemes a tesztekhez olyan bemeneti értékeket is választani, ami a kimeneti
+                            határértékeket fogja vizsgálni.
+                            </p>
+                        </label>
+                        <label for="s3" id="slide3">
+                            <p class="szoveg">
+                                <b class="cim">Ok-okozati tesztelés:</b> 
+                                <br>
+                                A funkcionális tesztelés talán legfontosabb célja, hogy kiderüljön, milyen
+                                bemeneti paraméterek hatására mi történik a kimeneten. 
+                                Ennek vizsgálatára egy ok-okozati gráfot vagy táblázatot célszerű készíteni, amit a
+                                tesztesetek kidolgozásakor használhatunk. Természetesen a lehetséges bemeneti-kimeneti kombinációk száma
+                                óriási lehet, ezért sokszor szinte képtelenség minden egyes esetet megvizsgálni. Ezért fontos azoknak a
+                                teszteset-kombinációknak az összeállítása, amelyekkel a leghatékonyabban tudjuk feltérképezni a
+                                hiányosságokat.
+                        
+                            </p>
+                        </label>
+                        <label for="s4" id="slide4">
+                            <p class="szoveg"> 
+                                <b class="cim">Véletlenszerű tesztelés:</b> 
+                                <br>
+                                A véletlenszerűen előállított tesztadatokkal elvégzett vizsgálatok célja azoknak a hibáknak a feltárása,
+                                amelyek a determinisztikus tesztek tervezésénél esetleg elkerülték a figyelmet. 
+                                A véletlenszerű tesztelés hibafeltáró képessége rendszerint alacsony, de általában megéri a ráfordítást, mert a tesztadatok
+                                viszonylag gyors előállítása újabb területen fedheti fel az eddig elrejtett hibákat.
+                                A funkcionális tesztelés, a tesztesetek végrehajtása részben automatizálható, azonban néhány esetben
+                                szükségszerű lehet a manuális tesztelés is.                            
+                            </p>
+                        </label>
+                        <label for="s5" id="slide5">
+                            <p class="szoveg"> 
+                                <b class="cim">Selenium:</b> 
+                                <br>
+                                A webes alkalmazások automatikus tesztelésére használható eszközök egyike a
+                                Selenium, amellyel funkcionális
+                                teszteket is végre tudunk hajtani.
+                                A Selenium segítségével a leggyakrabban használt webes böngészőkben futtathatunk egy-egy tesztesetet
+                                vagy
+                                egész tesztforgatókönyvet is úgy, mintha egy felhasználó futtatná őket. A Selenium többféle operációs
+                                rendszert is támogat, így felhasználhatósága széleskörűnek mondható a webes felületek tesztelésében.
+                            </p>
+                        </label>
+                    </section>
+                </div>
         </div>
     </div>
 </body>
