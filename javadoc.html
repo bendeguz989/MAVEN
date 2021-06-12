@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="javadoc.css">
     <link rel="icon" href="kepek/mavenfavicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap" rel="stylesheet">
     <title>JavaDoc</title>
 </head>
 
@@ -22,145 +24,102 @@
                 <li><a href="tesztpelda.html">Teszt példák</a></li>
             </ul>
         </div>
-        <div>
+        <p>
             <h3>Forrás dokumentáció – Javadoc / Mi is az a JAVADOC?</h3>
-            <ul class="lista">
-                A kódírás fontos része a dokumentálás. Szerencsére JAVA-ban elég jól kitalálták.
-                <br>A nyelv a JAVADOC szerinti comment írást támogatja leginkább, amire a különböző eszközök kiváló
-                támogatást is nyújtanak.
-                <br>A JAVA fordító környezet lehetőséget biztosít a forrásban elhelyezett szabványos leírókból
-                dokumentáció
-                készítését.
-                </p>
-            </ul>
-            <h3>Hogy lehet a kódot dokumentálni?</h3>
-            <ul class="lista">
-                A nyelv többféle lehetőséget ad komment írására, ezek közül az egyik kiefejzetten a
-                <br>dokumentálás: /**
-                <br>documentation */<br> A dokumentáció kötött formai elemet tartalmaz:
-                <li>/**…*/ közé kell írni</li>
-                <li>Osztály, interfész, metódus, konstruktor vagy adattag deklarációja előtt helyezhető el</li>
-                <li>javadoc TAG-eket lehet használni</li>
-                <li>szabványos HTML TAG-eket lehet használni a leíró részben.</li>
-            </ul>
-            </p>
-            </p>
-            <div>
-                <h3>Kétfajta címke használható:</h3>
-
-                <h3 class="tag">A blokk címke ( block tag)</h3>
-                <ul class="lista">
-                    <li>A többször is előforduló blokk címkéket egy csoportban ajánlott megadni. <br>Az alábbi
-                        sorrendben ajánlott a megadás:
-                        <i><br>@author <br>@version <br>@param <br>@return <br>@exception/@throws <br>@see<br>
-                            @serial/@serialField/@serialData <br>@deprecated</i>
-                </ul>
-                </ul>
-                <ol>@author szöveg: </ol>
-                <ul class="javadoc">
-                    <li>Szerzők nevének megadására szolgáló címke, melyből egy dokumentációs megjegyzésben több
-                        is előfordulhat.</li>
-                </ul>
-                <ol>@deprecated szöveg:</ol>
-                <ul class="javadoc">
-                    <li>Azt jelzi, hogy a dokumentált entitás elavult, használata kerülendő.</li>
-                    <li>Használata esetén a dokumentált entitáshoz adjuk meg a @Deprecated annotációt is!</li>
-                </ul>
-                <ol>@exception</ol>
-                <ul class="javadoc">
-                    <li>Ugyanaz, mint a @throws címke.</li>
-                </ul>
-                <ol>@hidden</ol>
-                <ul class="javadoc">
-                    <li>
-                        A programelem elrejtése a generált API dokumentációból.
-                    </li>
-                </ul>
-                <ol>@param</ol>
-                <ul class="javadoc">
-                    <li>Az adott nevű paraméter leírást szolgáltatja.</li>
-                    <li>Egy dokumentációs megjegyzésben egy adott nevű paraméterhez csak egyszer lehet megadni.
-                    </li>
-                    <li>A @param címkéket a paraméterek sorrendjének megfelelően ajánlott megadni.</li>
-                </ul>
-                <ol>@provides</ol>
-                <ul class="javadoc">(JDK 9)
-                    <ul></ul>
-                </ul>
-                <ol>@return</ol>
-                <ul class="javadoc">
-                    <li>Metódus visszatérési értékét szolgáltatja.</li>
-                </ul>
-                <ol>@see</ol>
-                <ul class="javadoc">
-                    <li>Hivatkozás elhelyezésére szolgál, többféle módon használható, egy dokumentációs
-                        megjegyzésben akár többször is előfordulhat</li>
-                </ul>
-                <ol>@since</ol>
-                <ul class="javadoc">
-                    <li>A szoftver azon verziójának megadására szolgál, melyben megjelent a dokumentált entitás.
-                    </li>
-                </ul>
-                <ol>@throws</ol>
-                <ul class="javadoc">
-                    <li>Metódus vagy konstruktor által dobott kivétel dokumentálására szolgál.</li>
-                    <li>Több @throws címke esetén ajánlott a kivételosztályok neve alapján ábécé sorrendbe
-                        rendezni ezeket.</li>
-                </ul>
-                <ol>@uses és @version</ol>
-                <ul class="javadoc">
-                    <li>A szoftver verziójának a jelzésére szolgál, amelynek része a dokumentált entitás.</li>
-                    <li>Egy dokumentációs megjegyzésben akár többször is előfordulhat.</li>
-                </ul>
-                </li>
-            </div>
-            </ul>
-            <div>
-                <h3 class="tag">Szövegközi címke (inline tag)</h3>
-                <ol>{@code szöveg}:</ol>
-                <ul class="javadoc">
-
-                    <li>A szöveg megjelenítése fix szélességű betűtípussal (programkódként).</li>
-                </ul>
-                <ol>{@docRoot}:</ol>
-                <ul class="javadoc">
-                    <li>A generált állományokat tartalmazó könyvtárstruktúra gyökerének relatív elérési
-                        útvonalát szolgáltatja.</li>
-                </ul>
-                <ol>{@index “kifejezés” leírás}</ol>
-                <ul class="javadoc">
-                    <li>Annak jelzésére szolgál, hogy az adott szó vagy kifejezés az adott opcionális leírással
-                        együtt meg kell, hogy jelenjen a standard doclet által létrehozott</li>
-                </ul>
-                <ol>{@inheritDoc}</ol>
-                <ul class="javadoc">
-                    <li>Dokumentáció másolása a „legközelebbi” ősosztályból vagy implementált interfészből.</li>
-                    <li>Csak metódushoz tartozó dokumentációs megjegyzésben használható</li>
-                </ul>
-                <ol>{@link csomag.osztály#tag címke}:</ol>
-                <ul class="javadoc">
-                    <li>Hiperhivatkozás az adott csomag, osztály, interfész, metódus, konstruktor vagy adattag
-                        dokumentációjára (megjelenítése fix szélességű betűtípussal).</li>
-                </ul>
-                <ol>{@linkplain csomag.osztály#tag címke}</ol>
-                <ul class="javadoc">
-                    <li>Ugyanaz, mint a {@link}, csak normál betűtípussal történik a megjelenítés.</li>
-                </ul>
-                <ol>{@literal szöveg}</ol>
-                <ul class="javadoc">
-                    <li>Ugyanaz, mint a {@code}, csak a szöveg megjelenítése normál betűtípussal történik.</li>
-                </ul>
-                <ol>{@summary szöveg}</ol>
-                <ul class="javadoc">
-                    <li>A fő leírás első mondatát jelzi.</li>
-                </ul>
-                <ol>{@value csomag.osztály#adattag}</ol>
-                <ul class="javadoc">
-                    <li>Az adott konstans adattag értékét szolgáltatja, csak final módosító esetén használható.
-                    </li>
-                </ul>
+        </p>
+        <div class="container">
+            <div class="box">
+                 <br>
+                    <p class="szoveg2">
+                        A kódírás fontos része a dokumentálás. Szerencsére JAVA-ban elég jól kitalálták.
+                        A nyelv a JAVADOC szerinti comment írást támogatja leginkább, amire a különböző eszközök kiváló
+                        támogatást is nyújtanak.
+                        A JAVA fordító környezet lehetőséget biztosít a forrásban elhelyezett szabványos leírókból
+                        dokumentáció
+                        készítését.
+                    </p>
             </div>
         </div>
+        <p>
+            <h3>Hogy lehet a kódot dokumentálni?</h3>
+        </p>
+        <div class="container">
+            <div class="box">
+                 <br>
+                    <p class="szoveg2">
+                        A nyelv többféle lehetőséget ad komment írására:
+                        <br>
+                        1. dokumentálás: /**.
+                        <br>
+                        2. documentation */.
+                        <br>
+                        3. Osztály, interfész, metódus, konstruktor vagy adattag deklarációja előtt helyezhető el.
+                        <br>
+                        4. avadoc TAG-eket lehet használni.
+                        <br>
+                        5. szabványos HTML TAG-eket lehet használni a leíró részben.
+                        <br>
+                    </p>
+            </div>
+        </div>
+        <p>
+            <h3>A blokk címke ( block tag)</h3>
+        </p>
+        <div class="container">  
+            <div class="box">
+                <br>
+                    <p class="szoveg2">
+                        A többször is előforduló blokk címkéket egy csoportban ajánlott megadni. Az alábbi sorrendben ajánlott a megadás:
+                        <br>
+                        1. <b>@author:</b> Szerzők nevének megadására szolgáló címke.
+                        <br>
+                        2. <b>@version:</b>
+                        <br>
+                        3. <b>@param:</b> Az adott nevű paraméter leírást szolgáltatja.
+                        <br>
+                        4. <b>@return:</b>  Metódus visszatérési értékét szolgáltatja.
+                        <br>
+                        5. <b>@exception/@throws:</b> Metódus vagy konstruktor által dobott kivétel dokumentálására szolgál.
+                        <br>
+                        6. <b>@see:</b>  Hivatkozás elhelyezésére szolgál.
+                        <br>
+                        7. <b>@serial/@serialField/@serialData:</b>
+                        <br>
+                        8. <b>@deprecated:</b> Azt jelzi, hogy a dokumentált entitás elavult, használata kerülendő.
+                    </p>
+            </div>
+        </div>
+        <p>
+            <h3>Szövegközi címke (inline tag)</h3>
+        </p>
+        <div class="container">  
+            <div class="box">
+                <br>
+                    <p class="szoveg2">
+                        <br>
+                        1. <b>{@code szöveg}:</b> A szöveg megjelenítése fix szélességű betűtípussal (programkódként).
+                        <br>
+                        2. <b>{@docRoot}:</b> A generált állományokat tartalmazó könyvtárstruktúra gyökerének relatív elérési útvonalát szolgáltatja.
+                        <br>
+                        3. <b>{@index “kifejezés” leírás}:</b> Annak jelzésére szolgál, hogy az adott szó vagy kifejezés az adott opcionális leírással
+                            együtt meg kell, hogy jelenjen.
+                        <br>
+                        4. <b>{@inheritDoc}:</b> Dokumentáció másolása a „legközelebbi” ősosztályból vagy implementált interfészből.
+                        <br>
+                        5. <b>{@link csomag.osztály#tag címke}:</b> Hiperhivatkozás az adott csomag, osztály, interfész, metódus, konstruktor vagy adattag
+                        dokumentációjára.
+                        <br>
+                        6. <b>{@linkplain csomag.osztály#tag címke}:</b> Ugyanaz, mint a {@link}, csak normál betűtípussal történik a megjelenítés.
+                        <br>
+                        7. <b>{@literal szöveg}:</b> Ugyanaz, mint a {@code}, csak a szöveg megjelenítése normál betűtípussal történik.
+                        <br>
+                        8. <b>{@summary szöveg}:</b> A fő leírás első mondatát jelzi.
+                        <br>
+                        9. <b>{@value csomag.osztály#adattag}:</b> Az adott konstans adattag értékét szolgáltatja, csak final módosító esetén használható.
+                    </p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
